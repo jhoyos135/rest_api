@@ -10,16 +10,16 @@
 </head>
 <body>
     <h1 class="title">Customer Finder API</h1>
-    <input type="reset" value="Reset" onClick="window.location.reload()">
+    <input type="reset" value="Clear" onClick="window.location.reload()">
     <div id="homepage">
         <h1>Where are they?</h1>
         <div id="customer-container">
-        <form id="search">
+        <form id="search" name="contact-form">
             <label>Enter your Latitude:</label>
             <input class="lat" type="text" ref="lat" placeholder="latitude" required />
             <label>Enter your Longitude:</label>
             <input class="lng" type="text" ref="lng" placeholder="longitude" required />
-            <input class="submit" type="submit" value="Find customers"  />
+            <input class="submit" type="submit" value="Find customers" onclick="submitForm()"/>
         </form>
             </div>
         <div id="customers">
