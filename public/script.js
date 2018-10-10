@@ -1,7 +1,9 @@
 
+
+window.onload = () => {
+
 let submit = document.querySelector('.submit');
 var form = document.getElementsByName('contact-form')[0];
-var isLoading = false;
 
 submit.onclick = function(e) {
     e.preventDefault();
@@ -14,8 +16,6 @@ submit.onclick = function(e) {
         return data.json();
 
     }).then(( myCustomers) => {
-
-
 
     let obj = myCustomers;
 
@@ -36,10 +36,9 @@ submit.onclick = function(e) {
     });
 
     form.reset();
+
+    document.querySelector("#customers").innerHTML = '';
+    
 };
 
-
-
-
-
-
+};
